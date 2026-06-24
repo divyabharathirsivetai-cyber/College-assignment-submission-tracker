@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Assignment Submission Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>College Assignment Submission Tracker</h1>
+
+    <div class="dashboard">
+        <div class="card">
+            <h3>Total</h3>
+            <p id="total">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Submitted</h3>
+            <p id="submitted">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Pending</h3>
+            <p id="pending">0</p>
+        </div>
+
+        <div class="card">
+            <h3>Late</h3>
+            <p id="late">0</p>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <input type="text" id="title" placeholder="Assignment Title">
+
+        <input type="text" id="subject" placeholder="Subject">
+
+        <input type="date" id="dueDate">
+
+        <select id="status">
+            <option value="Pending">Pending</option>
+            <option value="Submitted">Submitted</option>
+            <option value="Late">Late</option>
+        </select>
+
+        <button onclick="addAssignment()">Add Assignment</button>
+    </div>
+
+    <div class="filter-section">
+        <input type="text" id="filterSubject" placeholder="Filter by Subject">
+        <button onclick="filterAssignments()">Filter</button>
+        <button onclick="showAll()">Show All</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Subject</th>
+                <th>Due Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="assignmentTable">
+        </tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
