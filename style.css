@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 body{
@@ -100,4 +100,10 @@ th{
 .late{
     color:red;
     font-weight:bold;
+}
+
+@media(max-width:768px){
+    .dashboard{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
